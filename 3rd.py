@@ -1,17 +1,12 @@
-n=int(input("enter the emp no"))
+radius=20
+length=50
+breadth=40
+wire_round=5
+cost_wire=35
+semicircle_perimeter=3.14*radius
+rectangle_perimeter=length+breadth+radius
+single_round=semicircle_perimeter+rectangle_perimeter
+wire_length=single_round*wire_round
+total_cost=wire_length*cost_wire
 
-total_sallary=0
-for i in range(1,n+1):
-    basic_salary=int(input("enter the basic salary"))
-    if(basic_salary<2000):
-        da=basic_salary*0.10
-        ta=basic_salary*0.12
-        hra=basic_salary*0.15
-    else:
-        da=basic_salary*0.15
-        ta=basic_salary*0.18
-        hra=basic_salary*0.20
-    total_sallary=basic_salary+da+ta+hra
-    print(total_sallary)
-    
-
+print("total cost of facing,",round(total_cost,2))
